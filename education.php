@@ -1,4 +1,8 @@
 <?php include 'includes/header.php'; ?>
+<div class="container">
+    <h1>This page is under construction</h1>
+    <p>We are currently working on this section of the website. Please check back later!</p>
+</div>
 
 
 <h1 class="text-center my-4">Education</h1>

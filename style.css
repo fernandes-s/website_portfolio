@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Default text color */
+    font-family: Arial, sans-serif; /* Optional: Add a default font family */
+    margin: 0;
+    padding: 0;
+}
+
+.text-white {
+    color: #f0f0f0;
+}
+
+.text-muted {
+    color: #a9a9a9;
+    font-size: 1.2rem;
+}
+
+/* Layout Structure */
+html, body {
+    height: 100%; /* Full viewport height */
+    display: flex;
+    flex-direction: column; /* Ensure the footer stays at the bottom */
+}
+
+main {
+    flex: 1; /* Pushes footer to the bottom when content is short */
+}
+
+footer {
+    background-color: #333; /* Matches the dark theme */
+    color: #f0f0f0; /* Light text for visibility */
+    text-align: center;
+    padding: 1rem 0; /* Space inside the footer */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #1a1a1a; /* Light black background */
+}
+
+.navbar-brand, .nav-link {
+    color: #f0f0f0 !important; /* Light text color */
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #ff69b4 !important; /* Accent color on hover (pink) */
+}
+
+.navbar-toggler-icon {
+    filter: brightness(90%); /* Darker toggle icon */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents unwanted scrolling or layout shifts */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#typed-text {
+    color: #f0f0f0; /* Matches white text theme */
+    font-size: 1.5rem; /* Adjust as needed */
+    min-height: 1.5em; /* Ensures consistent height */
+    display: inline-block; /* Prevents collapsing */
+    font-weight: bold; /* Adds emphasis */
+}
+
+.social-icons {
+    margin-top: 20px; /* Ensure spacing is consistent */
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 15px; /* Space between the icons */
+}
+
+/* About Page */
+.container {
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center container horizontally */
+    padding: 20px;
+}
+
+.profile-image-container {
+    padding: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(211, 211, 211, 0.5), transparent 70%);
+    box-shadow: 0 0 20px rgba(211, 211, 211, 0.4), 0 0 40px rgba(211, 211, 211, 0.2);
+    margin: 20px auto; /* Center image container */
+}
+
+.profile-image {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(211, 211, 211, 0.6); /* Inner glow */
+    width: 200px; /* Optional: Set a max width */
+    height: 200px; /* Maintain aspect ratio */
+}
+
+.about-text-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-text-section p {
+    font-size: 1.25rem;
+    color: #d3d3d3;
+    line-height: 1.6;
+    text-align: center; /* Center the text */
+    margin-top: 10px;
+}
+
+/* Submit Testimonial Page */
+.form-label {
+    color: #d3d3d3;
+}
+
+.form-control.bg-secondary {
+    background-color: #2c2c2c; /* Grey background for form inputs */
+    border: none;
+    color: #f0f0f0; /* Matches text theme */
+}
+
+.btn-secondary {
+    background-color: #5a5a5a; /* Grey button */
+    border: none;
+    color: #f0f0f0; /* White text */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.btn-secondary:hover {
+    background-color: #737373; /* Slightly lighter grey on hover */
+}
+
+.bg-dark {
+    background-color: #333; /* Slightly lighter than the main background */
+    color: #d3d3d3;
+}
+
+/* Headings */
+h1.display-4 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* General Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
