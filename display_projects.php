@@ -28,7 +28,11 @@ $result = $conn->query($sql);
 
                 // Add hover effect with description
                 echo "<div class='project-hover position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center' style='background-color: rgba(0, 0, 0, 0.7); top: 0; left: 0; opacity: 0; transition: opacity 0.3s;'>";
-                echo "<h3 class='text-danger'>" . htmlspecialchars($row['title']) . "</h3>";
+                // hyperlink tag in the title
+                echo "<a href='" . htmlspecialchars($row['url']) . "' target='_blank' class='text-danger'>";
+                echo "<h3>" . htmlspecialchars($row['title']) . "</h3>";
+                echo "</a>";
+
                 echo "<p class='text-white px-3'>" . htmlspecialchars($row['description']) . "</p>";
                 echo "<p class='text-white px-3'><strong>Technologies:</strong> " . htmlspecialchars($row['technologies']) . "</p>";
                 // echo "<p class='text-muted'><strong>Date Completed:</strong> " . htmlspecialchars($row['date_completed']) . "</p>";

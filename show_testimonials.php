@@ -1,6 +1,6 @@
 <?php include 'includes/header.php'; ?> <!-- The database connection is included via the header -->
 
-<div class="container my-5">
+<div class="container my-5 text-center">
     <h1 class="display-4 text-center text-white mb-4">Customer Testimonials</h1>
     <p class="text-center text-muted">Hear what our customers have to say!</p>
 

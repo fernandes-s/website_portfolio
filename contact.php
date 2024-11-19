@@ -4,35 +4,36 @@
     <h1 class="display-4 text-center text-white mb-4">Drop Me a Message!</h1>
     <p class="text-center text-muted">I'd love to hear from you. Fill out the form below, and I'll get back to you as soon as possible!</p>
 
-    <form method="post" action="contact_submit.php" class="p-4 rounded shadow-lg" style="background-color: #2c2c2c;">
-        <!-- Name Field -->
-        <div class="mb-3">
-            <label for="name" class="form-label text-white">Name</label>
-            <input type="text" name="name" id="name" class="form-control bg-secondary text-white" placeholder="Enter your name" required>
-        </div>
+    <form method="post" action="contact_thanks.php" class="bg-dark p-4 rounded shadow-lg" style="background-color: #2c2c2c;">
+    <!-- Name Field -->
+    <div class="mb-3">
+        <label for="name" class="form-label text-white">Name</label>
+        <input type="text" name="name" id="name" class="form-control bg-secondary text-white" placeholder="Enter your name" required>
+    </div>
 
-        <!-- Email Field -->
-        <div class="mb-3">
-            <label for="email" class="form-label text-white">Email</label>
-            <input type="email" name="email" id="email" class="form-control bg-secondary text-white" placeholder="Enter your email" required>
-        </div>
+    <!-- Email Field -->
+    <div class="mb-3">
+        <label for="email" class="form-label text-white">Email</label>
+        <input type="email" name="email" id="email" class="form-control bg-secondary text-white" placeholder="Enter your email" required>
+    </div>
 
-        <!-- Phone Field -->
-        <div class="mb-3">
-            <label for="phone" class="form-label text-white">Phone</label>
-            <input type="tel" name="phone" id="phone" class="form-control bg-secondary text-white" placeholder="Enter your phone number" required>
-        </div>
+    <!-- Phone Field -->
+    <div class="mb-3">
+        <label for="phone" class="form-label text-white">Phone</label>
+        <input type="tel" name="phone" id="phone" class="form-control bg-secondary text-white" placeholder="Enter your phone number" required>
+    </div>
 
-        <!-- Message Field -->
-        <div class="mb-3 position-relative">
-            <label for="message" class="form-label text-white">Message</label>
-            <textarea name="message" id="message" class="form-control bg-secondary text-white" rows="4" maxlength="500" oninput="updateCounter()" placeholder="Write your message here" required></textarea>
-            <small id="charCounter" class="position-absolute text-white" style="bottom: 10px; right: 10px; font-size: 0.9rem;">500 characters remaining</small>
-        </div>
+    <!-- Message Field -->
+    <div class="mb-3 position-relative">
+        <label for="message" class="form-label text-white">Message</label>
+        <textarea name="message" id="message" class="form-control bg-secondary text-white" rows="4" maxlength="500" placeholder="Write your message here" required></textarea>
+        <small id="charCounter" class="position-absolute text-white" style="bottom: 10px; right: 10px; font-size: 0.9rem;">500 characters remaining</small>
+    </div>
 
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-danger w-100">Send Message</button>
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-danger w-100">Send Message</button>
     </form>
+
 </div>
 
 <!-- JavaScript for Character Counter -->
@@ -48,6 +49,21 @@
 <style>
     body {
         background-color: #1a1a1a; /* Black background */
+        min-height: 100vh; /* Ensures the page takes up the full viewport height */
+        display: flex; /* Enables flexbox */
+        flex-direction: column; /* Ensures column layout */
+    }
+
+    .container {
+        flex: 1; /* Pushes the footer to the bottom */
+    }
+
+    footer {
+        margin-top: auto; /* Footer stays at the bottom */
+        background-color: #1a1a1a;
+        color: #d3d3d3; /* Light text for footer */
+        padding: 10px 0;
+        text-align: center;
     }
 
     .text-white {
