@@ -26,7 +26,7 @@
     <!-- Message Field -->
     <div class="mb-3 position-relative">
         <label for="message" class="form-label text-white">Message</label>
-        <textarea name="message" id="message" class="form-control bg-secondary text-white" rows="4" maxlength="500" placeholder="Write your message here" required></textarea>
+        <textarea name="message" id="message" class="form-control bg-secondary text-white" rows="4" maxlength="500" placeholder="Write your message here" oninput="updateCounter()" required></textarea>
         <small id="charCounter" class="position-absolute text-white" style="bottom: 10px; right: 10px; font-size: 0.9rem;">500 characters remaining</small>
     </div>
 

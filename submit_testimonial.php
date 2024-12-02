@@ -37,32 +37,31 @@ ob_end_flush(); // Flush the buffer and send output to the browser
     <h1 class="display-4 text-center text-white mb-4">Submit Your Testimonial</h1>
     <p class="text-center text-muted">We’d love to hear from you! Please share your experience with us.</p>
 
-<!-- Adjusted Form Structure -->
-<div class="container text-white">
-    <form action="submit_testimonial.php" method="POST" enctype="multipart/form-data" class="bg-dark p-4 rounded shadow-lg">
-        <div class="mb-3">
-            <label for="name" class="form-label">Your Name:</label>
-            <input type="text" class="form-control bg-secondary text-white" id="name" name="name" required>
-        </div>
-        <div class="mb-3 position-relative">
-            <label for="testimonial" class="form-label">Your Testimonial:</label>
-            <textarea class="form-control bg-secondary text-white" id="testimonial" name="testimonial" rows="4" maxlength="250" required></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="image" class="form-label">Upload a Picture (Optional):</label>
-            <input type="file" class="form-control bg-secondary text-white" id="image" name="image" accept="image/*">
-        </div>
-        <button type="submit" class="btn btn-danger w-100">Submit</button>
-    </form>
+    <div class="container text-white">
+        <form action="submit_testimonial.php" method="POST" enctype="multipart/form-data" class="bg-dark p-4 rounded shadow-lg">
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name:</label>
+                <input type="text" class="form-control bg-secondary text-white" id="name" name="name" required>
+            </div>
+            <div class="mb-3 position-relative">
+                <label for="testimonial" class="form-label">Your Testimonial:</label>
+                <textarea class="form-control bg-secondary text-white" id="testimonial" name="testimonial" rows="4" maxlength="250" oninput="updateCounter()" required></textarea>
+                <small id="charCounter" class="position-absolute text-white" style="bottom: 10px; right: 10px; font-size: 0.9rem;">250 characters remaining</small>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload a Picture (Optional):</label>
+                <input type="file" class="form-control bg-secondary text-white" id="image" name="image" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-danger w-100">Submit</button>
+        </form>
+    </div>
 </div>
-</div>
-
 
 <!-- JavaScript for Character Counter -->
 <script>
     function updateCounter() {
         const maxLength = 250;
-        const currentLength = document.getElementById('message').value.length;
+        const currentLength = document.getElementById('testimonial').value.length;
         document.getElementById('charCounter').innerText = `${maxLength - currentLength} characters remaining`;
     }
 </script>
